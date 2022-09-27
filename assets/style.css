@@ -1,0 +1,11 @@
+#posts {
+    margin: 10px;
+}
+
+.post {
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
