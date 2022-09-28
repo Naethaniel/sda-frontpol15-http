@@ -1,11 +1,12 @@
 export class CommentsModel {
 
+    // Krok(13)
     constructor() {
         console.log('Comments model instance created');
     }
 
-    get allComments() {
-
+    getAllComments() {
+        
     }
 
     addComment(postId, comment) {
