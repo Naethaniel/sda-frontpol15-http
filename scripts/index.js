@@ -1,6 +1,8 @@
 import { PostsController } from './controllers/posts.js';
 import { CommentsController } from './controllers/comments.js';
 import { PostsModel } from './models/posts.js';
+import { CommentsModel } from './models/comments.js';
+
 
 const initApp = () => {
     // Krok (5)
@@ -15,6 +17,16 @@ const initApp = () => {
 
     // Krok (22) UWAGA! Tak na prawde ten krok wykona sie po kroku (19)
     // Dlaczego? Poniewa krok (19) zwraca Promise i dopiero jak zostanie wykonany wtedy wszsystkie funkcje .then(..) zostana wywolane
+    const commentsModel = new CommentsModel();
+
+    commentsModel.addComment({
+        postId: 1,
+        email: 'test@test.com',
+        name: 'Nazwa',
+        body: 'Jakies cialo'
+    });
+
+    commentsModel.deleteComment(5);
 }
 
 document.addEventListener('readystatechange', () => { // Krok (4)
