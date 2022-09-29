@@ -49,7 +49,7 @@ class Comments {
     }
 }
 
-export class Posts {
+class Posts {
 
     // Krok (7)
     constructor() {
